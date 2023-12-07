@@ -9,7 +9,7 @@ const Home = () => {
             <div id="wrapper">
                 <Header />
                 <main id="main">
-                    <Tools />
+                    {/* <Tools /> */}
 
                     <section className='keyboard_section'>
                         <KeyBoard />

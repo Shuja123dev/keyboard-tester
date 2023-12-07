@@ -11,8 +11,11 @@ input {
     display: flex;
     background-color: rgba(0, 0, 0, 0.1);
     justify-content: center;
-    width: 1024px;
+    width: 70%;
+    max-width: 1030px;
+    min-width: 1030px;
     margin: 0 auto;
+    padding: 5px 0px;
     border-radius: 5px;
 }
 
@@ -172,9 +175,26 @@ input {
 .keyboardContainer {
     background: linear-gradient(0deg, #28282B, #28282B),
         linear-gradient(180deg, rgba(255, 255, 255, 0.14) 14.52%, rgba(255, 255, 255, 0.08) 87.38%);
+    /* padding: 10px; */
 
 }
 
 .hg-theme-default .hg-button:active {
     color: black;
+}
+
+.keyboard_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 69rem;
+}
+
+@media(max-width : 1050px) {
+    .keyboard_section .keyBoard_container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(90deg)
+    }
 }

@@ -175,7 +175,7 @@ class KeyBoard extends Component {
 
     render() {
         return (
-            <div>
+            <div className="keyBoard_container">
                 <Input changer={this.onChangeInput} value={this.state.input} />
                 <div className={"keyboardContainer"}>
                     <Keyboard
