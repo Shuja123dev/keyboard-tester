@@ -187,7 +187,7 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 69rem;
+    margin-bottom: 4rem;
 }
 
 @media(max-width : 1050px) {
@@ -196,5 +196,10 @@ input {
         align-items: center;
         justify-content: center;
         transform: rotate(90deg)
+    }
+
+    .keyboard_section {
+
+        height: 65rem;
     }
 }
