@@ -1,23 +1,16 @@
-import { useState } from "react";
-import KeyBoard from "./components/KeyBoard";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css"
-import { useRef } from "react";
-import { useContext } from "react";
-import { AppContext } from "./context/AppData";
+import Home from "./pages/Home";
 
 function App() {
 
-  const [state, setState] = useState()
-  const inputRef = useRef(null);
-  const { keyValue, setKeyValue } = useContext(AppContext)
-
-  const focusInput = () => {
-    inputRef.current.focus()
-  }
-
   return (
     <>
-      <KeyBoard />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

@@ -59,6 +59,12 @@ input {
     align-items: center;
 }
 
+.dispNone {
+    /* visibility: hidden; */
+    opacity: 0;
+    height: 10px;
+}
+
 .controlArrows {
     display: flex;
     align-items: center;
@@ -134,7 +140,7 @@ input {
 
 .status_row {
     width: 100%;
-    padding: 1rem 0;
+    padding: 10px 0;
     display: flex;
 }
 

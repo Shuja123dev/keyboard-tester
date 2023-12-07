@@ -1,15 +1,10 @@
 import React, { Component } from "react";
-import { render } from "react-dom";
 import Keyboard from "react-simple-keyboard";
 import "react-simple-keyboard/build/css/index.css";
 import "./Keyboard.css";
-import { useState } from "react";
 import StatusLights from "./StatusLights";
+import Input from "./Input";
 
-
-// const [clickState, setClickState] = useState([
-
-// ])
 class KeyBoard extends Component {
 
     state = {
@@ -181,11 +176,7 @@ class KeyBoard extends Component {
     render() {
         return (
             <div>
-                {/* <input
-                    value={this.state.input}
-                    placeholder={"Tap on the virtual keyboard to start"}
-                    onChange={(e) => this.onChangeInput(e)}
-                /> */}
+                <Input changer={this.onChangeInput} value={this.state.input} />
                 <div className={"keyboardContainer"}>
                     <Keyboard
                         baseClass={"simple-keyboard-main"}
