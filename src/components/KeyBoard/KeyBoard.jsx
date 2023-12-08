@@ -1,219 +1,124 @@
-import React, { Component } from "react";
-import Keyboard from "react-simple-keyboard";
-import "react-simple-keyboard/build/css/index.css";
-import "./Keyboard.css";
-import StatusLights from "./StatusLights";
-import Input from "./Input";
+import React, { useEffect, useState } from 'react'
+import "./Keyboard.css"
+import windowsKeys from './WindowsKeys';
+import StatusLights from './StatusLights';
 
-class KeyBoard extends Component {
+const KeyBoard = () => {
 
-    state = {
-        layoutName: "default",
-        input: "",
-        clickState: [
-            {
-                class: "clickClass",
-                buttons: ""
-            },
-        ]
+    const [keyHold, setKeyHold] = useState(false)
+
+    const keyChecker = (enterdKey, keyArray) => {
+        let found = false;
+        keyArray.mainKeys.map((key) => {
+            if (enterdKey === key.text || enterdKey === key.shiftTxt || enterdKey === key.name || enterdKey === key.shiftText)
+                found = true;
+        })
+        return found
+    }
+
+    let timepressed;
+    const handleKeyDown = (event) => {
+        const result = keyChecker(event.key, windowsKeys);
+        console.log(event.key);
+        timepressed = setTimeout(() => {
+            // console.log("Key is pressed more than 1s");
+        }, 1000);
+
+        setKeyHold(true)
     };
 
-    commonKeyboardOptions = {
-        onChange: (input) => this.onChange(input),
-        onKeyPress: (button) => this.onKeyPress(button),
-        theme: "simple-keyboard hg-theme-default hg-layout-default",
-        physicalKeyboardHighlight: true,
-        syncInstanceInputs: true,
-        mergeDisplay: true,
-        debug: true,
+    const handleKeyUp = (event) => {
+        clearTimeout(timepressed);
     };
 
-    keyboardOptions = {
-        ...this.commonKeyboardOptions,
-        /**
-         * Layout by:
-         * Sterling Butters (https://github.com/SterlingButters)
-         */
-        layout: {
-            default: [
-                "{escape} {f1} {f2} {f3} {f4} {f5} {f6} {f7} {f8} {f9} {f10} {f11} {f12}",
-                "` 1 2 3 4 5 6 7 8 9 0 - = {backspace}",
-                "{tab} q w e r t y u i o p [ ] \\",
-                "{capslock} a s d f g h j k l ; ' {enter}",
-                "{shiftleft} z x c v b n m , . / {shiftright}",
-                "{controlleft} {altleft} {metaleft} {space} {metaright} {altright}",
-            ],
-            shift: [
-                "{escape} {f1} {f2} {f3} {f4} {f5} {f6} {f7} {f8} {f9} {f10} {f11} {f12}",
-                "~ ! @ # $ % ^ & * ( ) _ + {backspace}",
-                "{tab} Q W E R T Y U I O P { } |",
-                '{capslock} A S D F G H J K L : " {enter}',
-                "{shiftleft} Z X C V B N M < > ? {shiftright}",
-                "{controlleft} {altleft} {metaleft} {space} {metaright} {altright}",
-            ],
-        },
-        display: {
-            "{escape}": "esc ⎋",
-            "{tab}": "tab ⇥",
-            "{backspace}": "backspace ⌫",
-            "{enter}": "enter ↵",
-            "{capslock}": "caps lock ⇪",
-            "{shiftleft}": "shift ⇧",
-            "{shiftright}": "shift ⇧",
-            "{controlleft}": "ctrl ⌃",
-            "{controlright}": "ctrl ⌃",
-            "{altleft}": "alt ⌥",
-            "{altright}": "alt ⌥",
-            "{metaleft}": "cmd ⌘",
-            "{metaright}": "cmd ⌘",
-        },
-    };
+    useEffect(() => {
 
-    keyboardControlPadOptions = {
-        ...this.commonKeyboardOptions,
-        layout: {
-            default: [
-                "{prtscr} {scrolllock} {pause}",
-                "{insert} {home} {pageup}",
-                "{delete} {end} {pagedown}",
-            ],
-        },
-    };
+        document.addEventListener('keydown', handleKeyDown);
+        document.addEventListener('keyup', handleKeyUp);
 
-    keyboardArrowsOptions = {
-        ...this.commonKeyboardOptions,
-        layout: {
-            default: ["{arrowup}", "{arrowleft} {arrowdown} {arrowright}"],
-        },
-    };
+        return () => {
+            document.removeEventListener('keydown', handleKeyDown);
+            document.removeEventListener('keyup', handleKeyUp);
+        };
+    }, []);
 
-    keyboardNumPadOptions = {
-        ...this.commonKeyboardOptions,
-        layout: {
-            default: [
-                "{numlock} {numpaddivide} {numpadmultiply}",
-                "{numpad7} {numpad8} {numpad9}",
-                "{numpad4} {numpad5} {numpad6}",
-                "{numpad1} {numpad2} {numpad3}",
-                "{numpad0} {numpaddecimal}",
-            ],
-        },
-    };
-
-    keyboardNumPadEndOptions = {
-        ...this.commonKeyboardOptions,
-        layout: {
-            default: ["{numpadsubtract}", "{numpadadd}", "{numpadenter}"],
-        },
-    };
-
-    onChange = (input) => {
-        this.setState({
-            input: input,
-        });
-    };
-
-    onKeyPress = (button) => {
-        // console.log("Button pressed", button);
-
-        /**
-         * If you want to handle the shift and caps lock buttons
-         */
-
-        if (
-            button === "{shift}" ||
-            button === "{shiftleft}" ||
-            button === "{shiftright}" ||
-            button === "{capslock}"
-        ) {
-            this.handleShift();
-        }
-
-        // this.setState({
-        //     clickState: [
-        //         {
-        //             class: "clickClass",
-        //             buttons: button
-        //         },
-        //     ]
-        // })
-
-        // setTimeout(() => {
-        //     this.setState({
-        //         clickState: [
-        //             {
-        //                 class: "clickClass",
-        //                 buttons: ""
-        //             },
-        //         ]
-        //     })
-        // }, 100);
-
-        // alert("key pressed")
-    };
-
-    handleShift = () => {
-        let layoutName = this.state.layoutName;
-
-        this.setState({
-            layoutName: layoutName === "default" ? "shift" : "default",
-        });
-    };
-
-    onChangeInput = (event) => {
-        let input = event.target.value;
-        this.setState(
-            {
-                input: input,
-            },
-            () => {
-                // this.keyboard.setInput(input);
-            }
-        );
-
-    };
-
-    render() {
-        return (
-            <div className="keyBoard_container">
-                <Input changer={this.onChangeInput} value={this.state.input} />
-                <div className={"keyboardContainer"}>
-                    <Keyboard
-                        baseClass={"simple-keyboard-main"}
-                        keyboardRef={(r) => (this.keyboard = r)}
-                        layoutName={this.state.layoutName}
-                        {...this.keyboardOptions}
-                        buttonTheme={this.state.clickState}
-                    />
-
-                    <div className="controlArrows">
-                        <Keyboard
-                            baseClass={"simple-keyboard-control"}
-                            {...this.keyboardControlPadOptions}
-                        />
-                        <Keyboard
-                            baseClass={"simple-keyboard-arrows"}
-                            {...this.keyboardArrowsOptions}
-                        />
+    return (
+        <>
+            <div className="key_board">
+                <div className="main_keys">
+                    {windowsKeys.mainKeys.map((keyBtn, index) => {
+                        return (
+                            <>
+                                <div className={`primary_btn ${(index > 0 && index < 13) ? "functional_keys" : ""}`} id={`mainBtn${index + 1}`} key={`key${index}`}>
+                                    {keyBtn.icon && <img className='mb-1' src={keyBtn.icon} />}
+                                    {keyBtn.shiftTxt && <p className='mb-2'>{keyBtn.shiftTxt}</p>}
+                                    {keyBtn.text && <p>{keyBtn.text}</p>}
+                                </div>
+                            </>
+                        )
+                    })}
+                </div>
+                <div className="mid_box">
+                    <div className='mid_keys'>
+                        {windowsKeys.midKeys.map((keyBtn, index) => {
+                            return (
+                                <>
+                                    <div className={`primary_btn`} id={`midBtn${index + 1}`} key={`key${index}`}>
+                                        {keyBtn.icon && <img className='mb-1' src={keyBtn.icon} />}
+                                        {keyBtn.shiftTxt && <p className='mb-2'>{keyBtn.shiftTxt}</p>}
+                                        {keyBtn.text && <p>{keyBtn.text}</p>}
+                                    </div>
+                                </>
+                            )
+                        })}
                     </div>
+                    <div className="arrow_btns">
+                        {windowsKeys.arrowKeys.map((keyBtn, index) => {
+                            return (
+                                <>
+                                    <div className={`primary_btn`} id={`arrowBtn${index + 1}`} key={`key${index}`}>
+                                        {keyBtn.icon && <img className='mb-1' src={keyBtn.icon} />}
+                                        {keyBtn.shiftTxt && <p className='mb-2'>{keyBtn.shiftTxt}</p>}
+                                        {keyBtn.text && <p>{keyBtn.text}</p>}
+                                    </div>
+                                </>
+                            )
+                        })}
+                    </div>
+                </div>
 
-                    <div className="numPad" style={{ flexDirection: 'column' }}>
-                        <StatusLights />
-                        <div className="numPad">
-                            <Keyboard
-                                baseClass={"simple-keyboard-numpad"}
-                                {...this.keyboardNumPadOptions}
-                            />
-                            <Keyboard
-                                baseClass={"simple-keyboard-numpadEnd"}
-                                {...this.keyboardNumPadEndOptions}
-                            />
+                <div className="last_keys">
+                    <StatusLights />
+                    <div style={{ display: 'flex' }}>
+                        <div className="num_pad">
+                            {windowsKeys.numPadKeys.map((keyBtn, index) => {
+                                return (
+                                    <>
+                                        <div className={`primary_btn`} id={`numPadBtn${index + 1}`} key={`key${index}`}>
+                                            {keyBtn.icon && <img className='mb-1' src={keyBtn.icon} />}
+                                            {keyBtn.shiftTxt && <p className='mb-2'>{keyBtn.shiftTxt}</p>}
+                                            {keyBtn.text && <p>{keyBtn.text}</p>}
+                                        </div>
+                                    </>
+                                )
+                            })}
+                        </div>
+                        <div className="lastColumn">
+                            <div className={`primary_btn`} id={`numPadBtn14`}>
+                                <p>-</p>
+                            </div>
+                            <div className={`primary_btn`} id={`numPadBtn15`}>
+                                <p>+</p>
+                            </div>
+                            <div className={`primary_btn`} id={`numPadBtn16`}>
+                                <p>enter</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div >
-        );
-    }
+            </div>
+        </>
+    )
 }
 
 export default KeyBoard
