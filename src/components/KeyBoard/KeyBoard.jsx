@@ -9,9 +9,9 @@ const KeyBoard = () => {
 
     const keyChecker = (enterdKey, keyArray) => {
         let found = false;
-        keyArray.mainKeys.map((key) => {
+        keyArray.mainKeys.map((key, index) => {
             if (enterdKey === key.text || enterdKey === key.shiftTxt || enterdKey === key.name || enterdKey === key.shiftText)
-                found = true;
+                found = `mainBtn${index + 1}`;
         })
         return found
     }
@@ -19,6 +19,10 @@ const KeyBoard = () => {
     let timepressed;
     const handleKeyDown = (event) => {
         const result = keyChecker(event.key, windowsKeys);
+        if (result) {
+            document.getElementById(result).classList.add("active_key");
+            console.log(result);
+        }
         console.log(event.key);
         timepressed = setTimeout(() => {
             // console.log("Key is pressed more than 1s");
