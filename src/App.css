@@ -175,7 +175,7 @@ section.text p {
   margin-top: 3rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 @media only screen and (max-width: 767px) {
@@ -197,5 +197,17 @@ section.text p {
     display: flex;
     gap: 40px;
     justify-content: center;
+  }
+}
+
+.keyboard_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 690px) {
+  .keyboard_section {
+    flex-direction: column;
   }
 }

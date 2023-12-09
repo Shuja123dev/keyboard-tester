@@ -3,7 +3,7 @@
 .key_board {
     background: linear-gradient(0deg, #28282B, #28282B),
         linear-gradient(180deg, rgba(255, 255, 255, 0.14) 14.52%, rgba(255, 255, 255, 0.08) 87.38%);
-    max-width: 1262px;
+    max-width: 1280px;
     width: 85.5vw;
     color: #FFFFFF;
     aspect-ratio: 16, 8;
@@ -12,7 +12,6 @@
     flex-wrap: wrap;
     padding: 9px;
     border-radius: 12px;
-    gap: 10px;
 }
 
 .mid_box {
@@ -68,6 +67,7 @@
 
 .mid_keys,
 .arrow_btns {
+    margin: 0 1rem;
     display: flex;
     flex-wrap: wrap;
     gap: 7px 6px;
@@ -224,13 +224,24 @@
     font-size: 11px;
 }
 
-#numPadBtn15,
-#numPadBtn16 {
+.long_btn {
     height: 108px;
 }
 
 #numPadBtn13 {
     width: 110px;
+}
+
+.window_key {
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.window_key img {
+    width: 26px;
+    margin-bottom: 0 !important;
+    margin-right: 9px;
 }
 
 .active_key {

@@ -7,10 +7,11 @@ import f9 from "./keys/f9.svg"
 import f10 from "./keys/f10.svg"
 import k13 from "./keys/k13.png"
 import control from "./keys/control.svg"
-import windows from "./keys/white_windows.png"
-import context from "./keys/context.png"
+import command from "./keys/command.svg"
+import alt from "./keys/alt.svg"
 
-const windowsKeys = {
+
+const macKeys = {
     mainKeys: [
         {
             code: "Escape",
@@ -136,151 +137,122 @@ const windowsKeys = {
         {
             shiftTxt: "_",
             text: "-",
-            code: "Minus"
         },
         {
             shiftTxt: "+",
             text: "=",
-            code: "Equal"
         },
         {
             name: "Backspace",
-            code: "Backspace",
             text: "delete",
         },
         {
             name: "Tab",
-            code: "Tab",
             text: "tab",
         },
         {
             shiftText: "q",
-            code: "KeyQ",
             text: "Q",
         },
         {
             shiftText: "w",
-            code: "KeyW",
             text: "W",
         },
         {
             shiftText: "e",
-            code: "KeyE",
             text: "E",
         },
         {
             shiftText: "r",
-            code: "KeyR",
             text: "R",
         },
         {
             shiftText: "t",
-            code: "KeyT",
             text: "T",
         },
         {
             shiftText: "y",
-            code: "KeyY",
             text: "Y",
         },
         {
             shiftText: "u",
-            code: "KeyU",
             text: "U",
         },
         {
             shiftText: "i",
-            code: "KeyI",
             text: "I",
         },
         {
             shiftText: "o",
-            code: "KeyO",
             text: "O",
         },
         {
             shiftText: "p",
             text: "P",
-            code: "KeyP",
         },
         {
             shiftTxt: "{",
             text: "[",
-            code: "BracketLeft"
         },
         {
             shiftTxt: "}",
             text: "]",
-            code: "BracketRight"
         },
         {
             shiftTxt: "|",
             text: "|",
-            code: "Backslash"
         },
         //row 4
         {
             name: "CapsLock",
-            code: "CapsLock",
             text: "caps lock"
         },
         {
             shiftText: "a",
             text: "A",
-            code: "KeyA",
         },
         {
             shiftText: "s",
-            code: "KeyS",
             text: "S",
         },
         {
             shiftText: "d",
-            code: "KeyD",
             text: "D",
         },
         {
             shiftText: "f",
             text: "F",
-            code: "KeyF",
         },
         {
             shiftText: "g",
             text: "G",
-            code: "KeyG",
         },
         {
             shiftText: "h",
             text: "H",
-            code: "KeyH",
         },
         {
             shiftText: "j",
             text: "J",
-            code: "KeyJ",
         },
         {
             shiftText: "k",
             text: "K",
-            code: "KeyK",
         },
         {
             shiftText: "l",
             text: "L",
-            code: "KeyL",
         },
         {
             shiftTxt: ":",
             text: ";",
-            code: "Semicolon"
         },
         {
             shiftTxt: `"`,
-            code: "Quote",
             text: `'`,
         },
         {
-            code: "Enter",
+            name: "Enter",
             text: "return",
         },
         //row 5
@@ -291,52 +263,42 @@ const windowsKeys = {
         {
             shiftText: "z",
             text: "Z",
-            code: "KeyZ",
         },
         {
             shiftText: "x",
             text: "X",
-            code: "KeyX",
         },
         {
             shiftText: "c",
             text: "C",
-            code: "KeyC",
         },
         {
             shiftText: "v",
             text: "V",
-            code: "KeyV",
         },
         {
             shiftText: "b",
             text: "B",
-            code: "KeyB",
         },
         {
             shiftText: "n",
             text: "N",
-            code: "KeyN",
         },
         {
             shiftText: "m",
             text: "M",
-            code: "KeyM",
         },
         {
             shiftTxt: "<",
             text: ",",
-            code: "Comma"
         },
         {
             shiftTxt: ">",
             text: ".",
-            code: "Period"
         },
         {
             shiftTxt: "?",
             text: "/",
-            code: "Slash"
         },
         {
             code: "ShiftRight",
@@ -344,52 +306,58 @@ const windowsKeys = {
         },
         // row 6
         {
-            text: "ctrl",
-            code: "ControlLeft"
-        },
-        {
-            code: "MetaLeft",
-            icon: windows,
+            code: "ControlLeft",
+            icon: control,
+            text: "control",
         },
         {
             code: "AltLeft",
-            text: "alt",
+            icon: alt,
+            text: "option",
         },
         {
-            code: "Space",
+            code: "MetaLeft",
+            icon: command,
+            text: "command",
+        },
+        {
+            name: " ",
             text: "",
         },
         {
+            code: "MetaRight",
+            icon: command,
+            text: "command",
+        },
+        {
             code: "AltRight",
-            text: "alt",
+            icon: alt,
+            text: "option",
         },
         {
-            code: "ContextMenu",
-            icon: context,
-        },
-        {
-            text: "ctrl",
-            code: "ControlRight"
+            code: "ControlRight",
+            icon: control,
+            text: "control",
         },
     ],
     midKeys: [
         {
-            name: "PrintScreen",
-            text: "print screen",
+            text: "F13",
+            code: "F13",
         },
         {
-            name: "ScrollLock",
-            text: "scroll lock",
+            text: "F14",
+            code: "F14",
         },
         {
-            name: "Pause",
-            text: "pause",
+            text: "F15",
+            code: "F15",
         },
         // row 2
 
         {
             name: "Insert",
-            text: "insert",
+            text: "fn",
         },
         {
             name: "Home",
@@ -436,14 +404,14 @@ const windowsKeys = {
     ],
     numPadKeys: [
         {
-            name: "NumLock",
-            text: "num lock"
+            name: "Clear",
+            text: "clear"
+        },
+        {
+            text: "="
         },
         {
             text: "/"
-        },
-        {
-            text: "*"
         },
         {
             text: "7"
@@ -481,4 +449,5 @@ const windowsKeys = {
     ]
 }
 
-export default windowsKeys
+
+export default macKeys;

@@ -20,7 +20,7 @@ const StatusLights = () => {
             {
                 types.map((type) => {
                     return (
-                        <div class="status1">
+                        <div className="status1" key={type.text}>
                             {type.text}
                             <span style={{ background: type.color }}></span>
                         </div>

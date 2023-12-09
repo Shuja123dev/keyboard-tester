@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../components/Header'
 import Tools from '../components/Tools'
 import KeyBoard from '../components/KeyBoard/KeyBoard'
+import SwitchButtons from '../components/SwitchButtons/SwitchButtons'
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
                     {/* <Tools /> */}
 
                     <section className='keyboard_section'>
+                        <SwitchButtons />
                         <KeyBoard />
                     </section>
 

@@ -6,10 +6,11 @@ const AppContext = createContext();
 
 const AppData = ({ children }) => {
 
-    const [keyValue, setKeyValue] = useState()
+    const [keyValue, setKeyValue] = useState();
+    const [isMac, setIsMac] = useState(true);
 
     return (
-        <AppContext.Provider value={{ keyValue, setKeyValue }}>
+        <AppContext.Provider value={{ keyValue, setKeyValue, isMac, setIsMac }}>
             {children}
         </AppContext.Provider>
     )

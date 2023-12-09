@@ -1,0 +1,42 @@
+.btn-box {
+    height: 22rem;
+    width: 5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.mac-btn,
+.window-btn {
+    border-radius: 0.311rem;
+    height: 10.5rem;
+    width: 3.12rem;
+    cursor: pointer;
+
+}
+
+.active_os {
+    background-color: #000000 !important;
+}
+
+.window-btn {
+    background-color: white;
+}
+
+@media only screen and (max-width: 690px) {
+    .btn-box {
+        display: flex;
+        flex-direction: row;
+        width: 22rem;
+        height: 5rem;
+    }
+
+    .mac-btn,
+    .window-btn {
+        width: 10.5rem;
+        height: 3.12rem;
+    }
+}
