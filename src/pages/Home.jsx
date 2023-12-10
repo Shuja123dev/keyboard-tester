@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import Tools from '../components/Tools'
 import KeyBoard from '../components/KeyBoard/KeyBoard'
 import SwitchButtons from '../components/SwitchButtons/SwitchButtons'
+import KeyType from '../components/KeyBoard/KeyType'
 
 const Home = () => {
     return (
@@ -16,6 +17,8 @@ const Home = () => {
                         <SwitchButtons />
                         <KeyBoard />
                     </section>
+
+                    <KeyType />
 
 
                     <section className="text">

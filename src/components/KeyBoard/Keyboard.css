@@ -98,6 +98,7 @@
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    color: white;
 }
 
 .main_keys {
@@ -281,4 +282,22 @@
     width: 1px;
     transform: scale(1500);
     transition: 0.8s;
+}
+
+.key_definer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.key_card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.key_card .colorType {
+    margin-left: 1rem;
 }
