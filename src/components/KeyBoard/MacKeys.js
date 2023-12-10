@@ -138,122 +138,151 @@ const macKeys = {
         {
             shiftTxt: "_",
             text: "-",
+            code: "Minus"
         },
         {
             shiftTxt: "+",
             text: "=",
+            code: "Equal"
         },
         {
             name: "Backspace",
+            code: "Backspace",
             text: "delete",
         },
         {
             name: "Tab",
+            code: "Tab",
             text: "tab",
         },
         {
             shiftText: "q",
+            code: "KeyQ",
             text: "Q",
         },
         {
             shiftText: "w",
+            code: "KeyW",
             text: "W",
         },
         {
             shiftText: "e",
+            code: "KeyE",
             text: "E",
         },
         {
             shiftText: "r",
+            code: "KeyR",
             text: "R",
         },
         {
             shiftText: "t",
+            code: "KeyT",
             text: "T",
         },
         {
             shiftText: "y",
+            code: "KeyY",
             text: "Y",
         },
         {
             shiftText: "u",
+            code: "KeyU",
             text: "U",
         },
         {
             shiftText: "i",
+            code: "KeyI",
             text: "I",
         },
         {
             shiftText: "o",
+            code: "KeyO",
             text: "O",
         },
         {
             shiftText: "p",
             text: "P",
+            code: "KeyP",
         },
         {
             shiftTxt: "{",
             text: "[",
+            code: "BracketLeft"
         },
         {
             shiftTxt: "}",
             text: "]",
+            code: "BracketRight"
         },
         {
             shiftTxt: "|",
             text: "|",
+            code: "Backslash"
         },
         //row 4
         {
             name: "CapsLock",
+            code: "CapsLock",
             text: "caps lock"
         },
         {
             shiftText: "a",
             text: "A",
+            code: "KeyA",
         },
         {
             shiftText: "s",
+            code: "KeyS",
             text: "S",
         },
         {
             shiftText: "d",
+            code: "KeyD",
             text: "D",
         },
         {
             shiftText: "f",
             text: "F",
+            code: "KeyF",
         },
         {
             shiftText: "g",
             text: "G",
+            code: "KeyG",
         },
         {
             shiftText: "h",
             text: "H",
+            code: "KeyH",
         },
         {
             shiftText: "j",
             text: "J",
+            code: "KeyJ",
         },
         {
             shiftText: "k",
             text: "K",
+            code: "KeyK",
         },
         {
             shiftText: "l",
             text: "L",
+            code: "KeyL",
         },
         {
             shiftTxt: ":",
             text: ";",
+            code: "Semicolon"
         },
         {
             shiftTxt: `"`,
+            code: "Quote",
             text: `'`,
         },
         {
-            name: "Enter",
+            code: "Enter",
             text: "return",
         },
         //row 5
@@ -264,42 +293,52 @@ const macKeys = {
         {
             shiftText: "z",
             text: "Z",
+            code: "KeyZ",
         },
         {
             shiftText: "x",
             text: "X",
+            code: "KeyX",
         },
         {
             shiftText: "c",
             text: "C",
+            code: "KeyC",
         },
         {
             shiftText: "v",
             text: "V",
+            code: "KeyV",
         },
         {
             shiftText: "b",
             text: "B",
+            code: "KeyB",
         },
         {
             shiftText: "n",
             text: "N",
+            code: "KeyN",
         },
         {
             shiftText: "m",
             text: "M",
+            code: "KeyM",
         },
         {
             shiftTxt: "<",
             text: ",",
+            code: "Comma"
         },
         {
             shiftTxt: ">",
             text: ".",
+            code: "Period"
         },
         {
             shiftTxt: "?",
             text: "/",
+            code: "Slash"
         },
         {
             code: "ShiftRight",
@@ -327,7 +366,7 @@ const macKeys = {
             text: "command",
         },
         {
-            name: " ",
+            code: "Space",
             text: "",
         },
         {
@@ -362,15 +401,15 @@ const macKeys = {
         // row 2
 
         {
-            name: "Insert",
-            text: "fn",
+            code: "Insert",
+            text: "insert",
         },
         {
-            name: "Home",
+            code: "Home",
             text: "home",
         },
         {
-            name: "PageUp",
+            code: "PageUp",
             text: "page up",
         },
 
@@ -378,15 +417,15 @@ const macKeys = {
 
 
         {
-            name: "Delete",
+            code: "Delete",
             text: "delete",
         },
         {
-            name: "End",
+            code: "End",
             text: "end",
         },
         {
-            name: "PageDown",
+            code: "PageDown",
             text: "page down",
         },
     ],
@@ -410,47 +449,60 @@ const macKeys = {
     ],
     numPadKeys: [
         {
-            name: "Clear",
+            code: "Clear",
             text: "clear"
         },
         {
-            text: "="
+            text: "=",
+            code: "NumpadEqual"
         },
         {
-            text: "/"
+            text: "/",
+            code: "NumpadDivide"
         },
         {
-            text: "7"
+            text: "7",
+            code: "Numpad7"
         },
         {
-            text: "8"
+            text: "8",
+            code: "Numpad8"
         },
         {
-            text: "9"
+            text: "9",
+            code: "Numpad9"
         },
         {
-            text: "4"
+            text: "4",
+            code: "Numpad4"
         },
         {
-            text: "5"
+            text: "5",
+            code: "Numpad5"
         },
         {
-            text: "6"
+            text: "6",
+            code: "Numpad6"
         },
         {
-            text: "1"
+            text: "1",
+            code: "Numpad1"
         },
         {
-            text: "2"
+            text: "2",
+            code: "Numpad2"
         },
         {
-            text: "3"
+            text: "3",
+            code: "Numpad3"
         },
         {
-            text: "0"
+            text: "0",
+            code: "Numpad0"
         },
         {
-            text: "."
+            text: ".",
+            code: "NumpadDecimal"
         },
     ]
 }

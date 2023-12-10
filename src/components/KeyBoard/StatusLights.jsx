@@ -15,6 +15,7 @@ const StatusLights = ({ isCapsLock, isNumLock, isScrollLock }) => {
             color: isScrollLock ? "#dbb921" : "grey"
         },
     ]
+
     return (
         <div className="status_row lights">
             {

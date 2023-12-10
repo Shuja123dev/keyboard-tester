@@ -66,7 +66,7 @@ const KeyBoard = () => {
     const handleKeyUp = (event) => {
 
     };
-
+    console.log("render");
     useEffect(() => {
         document.addEventListener('keydown', handleKeyDown);
         document.addEventListener('keyup', handleKeyUp);
