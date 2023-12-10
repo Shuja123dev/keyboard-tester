@@ -1,18 +1,18 @@
 import React from 'react'
 
-const StatusLights = () => {
+const StatusLights = ({ isCapsLock, isNumLock, isScrollLock }) => {
     const types = [
         {
             text: "1",
-            color: "grey"
+            color: isNumLock ? "#dbb921" : "grey"
         },
         {
             text: "A",
-            color: "#dbb921"
+            color: isCapsLock ? "#dbb921" : "grey"
         },
         {
             text: "V",
-            color: "grey"
+            color: isScrollLock ? "#dbb921" : "grey"
         },
     ]
     return (

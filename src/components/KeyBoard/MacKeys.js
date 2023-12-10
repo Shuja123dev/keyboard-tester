@@ -386,19 +386,19 @@ const macKeys = {
     ],
     arrowKeys: [
         {
-            name: "ArrowUp",
+            code: "ArrowUp",
             text: "↑"
         },
         {
-            name: "ArrowLeft",
+            code: "ArrowLeft",
             text: "←"
         },
         {
-            name: "ArrowDown",
+            code: "ArrowDown",
             text: "↓"
         },
         {
-            name: "ArrowRight",
+            code: "ArrowRight",
             text: "→"
         },
     ],

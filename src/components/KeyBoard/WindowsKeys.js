@@ -374,29 +374,29 @@ const windowsKeys = {
     ],
     midKeys: [
         {
-            name: "PrintScreen",
+            code: "PrintScreen",
             text: "print screen",
         },
         {
-            name: "ScrollLock",
+            code: "ScrollLock",
             text: "scroll lock",
         },
         {
-            name: "Pause",
+            code: "Pause",
             text: "pause",
         },
         // row 2
 
         {
-            name: "Insert",
+            code: "Insert",
             text: "insert",
         },
         {
-            name: "Home",
+            code: "Home",
             text: "home",
         },
         {
-            name: "PageUp",
+            code: "PageUp",
             text: "page up",
         },
 
@@ -404,33 +404,33 @@ const windowsKeys = {
 
 
         {
-            name: "Delete",
+            code: "Delete",
             text: "delete",
         },
         {
-            name: "End",
+            code: "End",
             text: "end",
         },
         {
-            name: "PageDown",
+            code: "PageDown",
             text: "page down",
         },
     ],
     arrowKeys: [
         {
-            name: "ArrowUp",
+            code: "ArrowUp",
             text: "↑"
         },
         {
-            name: "ArrowLeft",
+            code: "ArrowLeft",
             text: "←"
         },
         {
-            name: "ArrowDown",
+            code: "ArrowDown",
             text: "↓"
         },
         {
-            name: "ArrowRight",
+            code: "ArrowRight",
             text: "→"
         },
     ],

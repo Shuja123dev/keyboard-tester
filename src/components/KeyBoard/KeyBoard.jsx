@@ -8,18 +8,26 @@ import { AppContext } from '../../context/AppData';
 const KeyBoard = () => {
 
     const { isMac, setIsMac } = useContext(AppContext);
+    const [isCapsLock, setIsCapsLock] = useState(false);
+    const [isNumLock, setIsNumLock] = useState(false);
+    const [isScrollLock, setIsScrollLock] = useState(false);
 
     const keyChecker = (enterdKey, keyArray) => {
         let found = false;
+        console.log(keyArray.midKeys);
         keyArray.mainKeys.map((key, index) => {
             if (enterdKey.code === key.code) {
-                found = `mainBtn${index + 1}`;
-                return
+                return found = `mainBtn${index + 1}`;
             }
-        }) || keyArray.midKeys.map((key, index) => {
+        }) && keyArray.midKeys.map((key, index) => {
             if (enterdKey.code === key.code) {
-                found = `mainBtn${index + 1}`;
-                return
+                console.log(enterdKey.code + " is key");
+                return found = `midBtn${index + 1}`;
+            }
+        }) && keyArray.arrowKeys.map((key, index) => {
+            if (enterdKey.code === key.code) {
+                console.log(enterdKey.code + " is key");
+                return found = `arrowBtn${index + 1}`;
             }
         })
         return found
@@ -32,6 +40,13 @@ const KeyBoard = () => {
         if (result) {
             document.getElementById(result).classList.add("active_key");
         }
+
+        console.log(result);
+
+        setIsCapsLock(event.getModifierState('CapsLock'));
+        setIsNumLock(event.getModifierState('NumLock'));
+        setIsScrollLock(event.getModifierState('ScrollLock'));
+
         setTimeout(() => {
             const currentTime = performance.now();
             const holdDuration = currentTime - timePressed;
@@ -118,7 +133,7 @@ const KeyBoard = () => {
                     </div>
                     <div className="arrow_btns">
                         {
-                            windowsKeys.arrowKeys.map((keyBtn, index) => {
+                            isMac ? macKeys.arrowKeys.map((keyBtn, index) => {
                                 return (
                                     <>
                                         <div className={`primary_btn`} id={`arrowBtn${index + 1}`} key={`key${index}`}>
@@ -128,13 +143,30 @@ const KeyBoard = () => {
                                         </div>
                                     </>
                                 )
-                            })
+                            }) :
+                                windowsKeys.arrowKeys.map((keyBtn, index) => {
+                                    return (
+                                        <>
+                                            <div className={`primary_btn`} id={`arrowBtn${index + 1}`} key={`key${index}`}>
+                                                {keyBtn.icon && <img className='mb-1' src={keyBtn.icon} />}
+                                                {keyBtn.shiftTxt && <p className='mb-2'>{keyBtn.shiftTxt}</p>}
+                                                {keyBtn.text && <p>{keyBtn.text}</p>}
+                                            </div>
+                                        </>
+                                    )
+                                })
                         }
                     </div>
                 </div>
 
                 <div className="last_keys">
-                    <StatusLights />
+
+                    <StatusLights
+                        isCapsLock={isCapsLock}
+                        isNumLock={isNumLock}
+                        isScrollLock={isScrollLock}
+                    />
+
                     <div style={{ display: 'flex' }}>
                         <div className="num_pad">
                             {
