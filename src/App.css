@@ -206,8 +206,20 @@ section.text p {
   justify-content: center;
 }
 
-@media only screen and (max-width: 690px) {
+@media only screen and (max-width: 1490px) {
   .keyboard_section {
     flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 1413px) {
+  .lastColumn {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 1360px) {
+  .last_keys {
+    display: none !important;
   }
 }

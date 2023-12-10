@@ -4,13 +4,14 @@
     background: linear-gradient(0deg, #28282B, #28282B),
         linear-gradient(180deg, rgba(255, 255, 255, 0.14) 14.52%, rgba(255, 255, 255, 0.08) 87.38%);
     max-width: 1280px;
-    width: 85.5vw;
+    width: 90vw;
     color: #FFFFFF;
     aspect-ratio: 16, 8;
     font-family: 'Plus Jakarta Sans', sans-serif;
     display: flex;
     flex-wrap: wrap;
     padding: 9px;
+    width: fit-content;
     border-radius: 12px;
 }
 
@@ -173,44 +174,36 @@
     font-size: 11px;
 }
 
-#mainBtn68 {
-    width: 79.74px;
+#mainBtn69 {
+    width: 72.74px;
     justify-content: flex-end !important;
     align-items: flex-start !important;
     font-size: 11px;
 }
 
-#mainBtn69 {
-    width: 66.45px;
-    justify-content: flex-end !important;
-    align-items: flex-end !important;
-    font-size: 11px;
-}
-
 #mainBtn70 {
-    width: 80.57px;
+    width: 66.45px;
     justify-content: flex-end !important;
     align-items: flex-end !important;
     font-size: 11px;
 }
 
 #mainBtn71 {
-    width: 339.22px;
+    width: 72.74px;
     justify-content: flex-end !important;
     align-items: flex-end !important;
     font-size: 11px;
 }
 
 #mainBtn72 {
-    width: 80.57px;
+    width: 310.22px;
     justify-content: flex-end !important;
     align-items: flex-end !important;
     font-size: 11px;
 }
 
-
 #mainBtn73 {
-    width: 66.45px;
+    width: 72.74px;
     justify-content: flex-end !important;
     align-items: flex-end !important;
     font-size: 11px;
@@ -218,7 +211,15 @@
 
 
 #mainBtn74 {
-    width: 80.57px;
+    width: 66.45px;
+    justify-content: flex-end !important;
+    align-items: flex-end !important;
+    font-size: 11px;
+}
+
+
+#mainBtn75 {
+    width: 72.74px;
     justify-content: flex-end !important;
     align-items: flex-end !important;
     font-size: 11px;
@@ -230,6 +231,16 @@
 
 #numPadBtn13 {
     width: 110px;
+}
+
+#mainBtn68 {
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+#mainBtn68 img {
+    height: 14px;
+    margin-bottom: 5px;
 }
 
 .window_key {

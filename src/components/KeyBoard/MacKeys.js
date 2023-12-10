@@ -9,6 +9,7 @@ import k13 from "./keys/k13.png"
 import control from "./keys/control.svg"
 import command from "./keys/command.svg"
 import alt from "./keys/alt.svg"
+import macFn from "./keys/macFn.png"
 
 
 const macKeys = {
@@ -305,6 +306,11 @@ const macKeys = {
             text: "shift",
         },
         // row 6
+        {
+            code: "ControlLeft",
+            icon: macFn,
+            text: "fn",
+        },
         {
             code: "ControlLeft",
             icon: control,

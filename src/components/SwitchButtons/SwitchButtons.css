@@ -26,7 +26,7 @@
     background-color: white;
 }
 
-@media only screen and (max-width: 690px) {
+@media only screen and (max-width: 1490px) {
     .btn-box {
         display: flex;
         flex-direction: row;

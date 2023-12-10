@@ -14,7 +14,6 @@ const KeyBoard = () => {
 
     const keyChecker = (enterdKey, keyArray) => {
         let found = false;
-        console.log(keyArray.midKeys);
         keyArray.mainKeys.map((key, index) => {
             if (enterdKey.code === key.code) {
                 return found = `mainBtn${index + 1}`;
@@ -29,6 +28,11 @@ const KeyBoard = () => {
                 console.log(enterdKey.code + " is key");
                 return found = `arrowBtn${index + 1}`;
             }
+        }) && keyArray.numPadKeys.map((key, index) => {
+            if (enterdKey.code === key.code) {
+                console.log(enterdKey.code + " is key");
+                return found = `numPadBtn${index + 1}`;
+            }
         })
         return found
     }
@@ -37,11 +41,10 @@ const KeyBoard = () => {
     const handleKeyDown = (event) => {
         result = keyChecker(event, isMac ? macKeys : windowsKeys);
         timePressed = performance.now();
+        console.log(event.code);
         if (result) {
             document.getElementById(result).classList.add("active_key");
         }
-
-        console.log(result);
 
         setIsCapsLock(event.getModifierState('CapsLock'));
         setIsNumLock(event.getModifierState('NumLock'));
@@ -93,7 +96,7 @@ const KeyBoard = () => {
                             windowsKeys.mainKeys.map((keyBtn, index) => {
                                 return (
                                     <>
-                                        <div className={`primary_btn ${(index > 0 && index < 13) ? "functional_keys" : ""}  ${index === 68 || index === 72 ? "window_key" : ""}`} id={`mainBtn${index + 1}`} key={`key${index}`}>
+                                        <div className={`primary_btn ${(index > 0 && index < 13) ? "functional_keys" : ""}  ${index === 69 || index === 73 ? "window_key" : ""}`} id={`mainBtn${index + 1}`} key={`key${index}`}>
                                             {keyBtn.icon && <img className='mb-1' src={keyBtn.icon} />}
                                             {keyBtn.shiftTxt && <p className='mb-2'>{keyBtn.shiftTxt}</p>}
                                             {keyBtn.text && <p>{keyBtn.text}</p>}

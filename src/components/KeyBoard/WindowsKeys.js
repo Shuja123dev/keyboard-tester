@@ -344,6 +344,10 @@ const windowsKeys = {
         },
         // row 6
         {
+            text: "fn",
+            code: "fn"
+        },
+        {
             text: "ctrl",
             code: "ControlLeft"
         },
@@ -436,47 +440,60 @@ const windowsKeys = {
     ],
     numPadKeys: [
         {
-            name: "NumLock",
+            code: "NumLock",
             text: "num lock"
         },
         {
-            text: "/"
+            text: "/",
+            code: "NumpadDivide"
         },
         {
-            text: "*"
+            text: "*",
+            code: "NumpadMultiply"
         },
         {
-            text: "7"
+            text: "7",
+            code: "Numpad7"
         },
         {
-            text: "8"
+            text: "8",
+            code: "Numpad8"
         },
         {
-            text: "9"
+            text: "9",
+            code: "Numpad9"
         },
         {
-            text: "4"
+            text: "4",
+            code: "Numpad4"
         },
         {
-            text: "5"
+            text: "5",
+            code: "Numpad5"
         },
         {
-            text: "6"
+            text: "6",
+            code: "Numpad6"
         },
         {
-            text: "1"
+            text: "1",
+            code: "Numpad1"
         },
         {
-            text: "2"
+            text: "2",
+            code: "Numpad2"
         },
         {
-            text: "3"
+            text: "3",
+            code: "Numpad3"
         },
         {
-            text: "0"
+            text: "0",
+            code: "Numpad0"
         },
         {
-            text: "."
+            text: ".",
+            code: "NumpadDecimal"
         },
     ]
 }
