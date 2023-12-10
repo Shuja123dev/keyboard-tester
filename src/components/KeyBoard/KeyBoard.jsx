@@ -4,13 +4,15 @@ import windowsKeys from './WindowsKeys';
 import StatusLights from './StatusLights';
 import macKeys from './MacKeys';
 import { AppContext } from '../../context/AppData';
+import Input from './Input';
 
 const KeyBoard = () => {
 
-    const { isMac, setIsMac } = useContext(AppContext);
+    const { isMac } = useContext(AppContext);
     const [isCapsLock, setIsCapsLock] = useState(false);
     const [isNumLock, setIsNumLock] = useState(false);
     const [isScrollLock, setIsScrollLock] = useState(false);
+    const [input, setInput] = useState("")
 
     const keyChecker = (enterdKey, keyArray) => {
         let found = false;
@@ -18,21 +20,22 @@ const KeyBoard = () => {
             if (enterdKey.code === key.code) {
                 return found = `mainBtn${index + 1}`;
             }
+            return false
         }) && keyArray.midKeys.map((key, index) => {
             if (enterdKey.code === key.code) {
-                console.log(enterdKey.code + " is key");
                 return found = `midBtn${index + 1}`;
             }
+            return false
         }) && keyArray.arrowKeys.map((key, index) => {
             if (enterdKey.code === key.code) {
-                console.log(enterdKey.code + " is key");
                 return found = `arrowBtn${index + 1}`;
             }
+            return false
         }) && keyArray.numPadKeys.map((key, index) => {
             if (enterdKey.code === key.code) {
-                console.log(enterdKey.code + " is key");
                 return found = `numPadBtn${index + 1}`;
             }
+            return false
         })
         return found
     }
@@ -41,7 +44,6 @@ const KeyBoard = () => {
     const handleKeyDown = (event) => {
         result = keyChecker(event, isMac ? macKeys : windowsKeys);
         timePressed = performance.now();
-        console.log(event.code);
         if (result) {
             document.getElementById(result).classList.add("active_key");
         }
@@ -66,7 +68,6 @@ const KeyBoard = () => {
     const handleKeyUp = (event) => {
 
     };
-    console.log("render");
     useEffect(() => {
         document.addEventListener('keydown', handleKeyDown);
         document.addEventListener('keyup', handleKeyUp);
@@ -75,10 +76,15 @@ const KeyBoard = () => {
             document.removeEventListener('keydown', handleKeyDown);
             document.removeEventListener('keyup', handleKeyUp);
         };
+        // eslint-disable-next-line
     }, [isMac]);
 
     return (
         <>
+            <Input
+                value={input}
+                changer={setInput}
+            />
             <div className="key_board">
                 <div className="main_keys">
                     {
@@ -86,7 +92,7 @@ const KeyBoard = () => {
                             return (
                                 <>
                                     <div className={`primary_btn ${(index > 0 && index < 13) ? "functional_keys" : ""}`} id={`mainBtn${index + 1}`} key={`key${index}`}>
-                                        {keyBtn.icon && <img className='mb-1' src={keyBtn.icon} />}
+                                        {keyBtn.icon && <img className='mb-1' src={keyBtn.icon} alt="lazy" />}
                                         {keyBtn.shiftTxt && <p className='mb-2'>{keyBtn.shiftTxt}</p>}
                                         {keyBtn.text && <p>{keyBtn.text}</p>}
                                     </div>
@@ -97,7 +103,7 @@ const KeyBoard = () => {
                                 return (
                                     <>
                                         <div className={`primary_btn ${(index > 0 && index < 13) ? "functional_keys" : ""}  ${index === 69 || index === 73 ? "window_key" : ""}`} id={`mainBtn${index + 1}`} key={`key${index}`}>
-                                            {keyBtn.icon && <img className='mb-1' src={keyBtn.icon} />}
+                                            {keyBtn.icon && <img className='mb-1' src={keyBtn.icon} alt="lazy" />}
                                             {keyBtn.shiftTxt && <p className='mb-2'>{keyBtn.shiftTxt}</p>}
                                             {keyBtn.text && <p>{keyBtn.text}</p>}
                                         </div>
@@ -113,7 +119,7 @@ const KeyBoard = () => {
                                 return (
                                     <>
                                         <div className={`primary_btn ${index < 3 ? "functional_keys" : ""}`} id={`midBtn${index + 1}`} key={`key${index}`}>
-                                            {keyBtn.icon && <img className='mb-1' src={keyBtn.icon} />}
+                                            {keyBtn.icon && <img className='mb-1' src={keyBtn.icon} alt="lazy" />}
                                             {keyBtn.shiftTxt && <p className='mb-2'>{keyBtn.shiftTxt}</p>}
                                             {keyBtn.text && <p>{keyBtn.text}</p>}
                                         </div>
@@ -125,7 +131,7 @@ const KeyBoard = () => {
                                     return (
                                         <>
                                             <div className={`primary_btn`} id={`midBtn${index + 1}`} key={`key${index}`}>
-                                                {keyBtn.icon && <img className='mb-1' src={keyBtn.icon} />}
+                                                {keyBtn.icon && <img className='mb-1' src={keyBtn.icon} alt="lazy" />}
                                                 {keyBtn.shiftTxt && <p className='mb-2'>{keyBtn.shiftTxt}</p>}
                                                 {keyBtn.text && <p>{keyBtn.text}</p>}
                                             </div>
@@ -140,7 +146,7 @@ const KeyBoard = () => {
                                 return (
                                     <>
                                         <div className={`primary_btn`} id={`arrowBtn${index + 1}`} key={`key${index}`}>
-                                            {keyBtn.icon && <img className='mb-1' src={keyBtn.icon} />}
+                                            {keyBtn.icon && <img className='mb-1' src={keyBtn.icon} alt="lazy" />}
                                             {keyBtn.shiftTxt && <p className='mb-2'>{keyBtn.shiftTxt}</p>}
                                             {keyBtn.text && <p>{keyBtn.text}</p>}
                                         </div>
@@ -151,7 +157,7 @@ const KeyBoard = () => {
                                     return (
                                         <>
                                             <div className={`primary_btn`} id={`arrowBtn${index + 1}`} key={`key${index}`}>
-                                                {keyBtn.icon && <img className='mb-1' src={keyBtn.icon} />}
+                                                {keyBtn.icon && <img className='mb-1' src={keyBtn.icon} alt="lazy" />}
                                                 {keyBtn.shiftTxt && <p className='mb-2'>{keyBtn.shiftTxt}</p>}
                                                 {keyBtn.text && <p>{keyBtn.text}</p>}
                                             </div>
@@ -177,7 +183,7 @@ const KeyBoard = () => {
                                     return (
                                         <>
                                             <div className={`primary_btn`} id={`numPadBtn${index + 1}`} key={`key${index}`}>
-                                                {keyBtn.icon && <img className='mb-1' src={keyBtn.icon} />}
+                                                {keyBtn.icon && <img className='mb-1' src={keyBtn.icon} alt="lazy" />}
                                                 {keyBtn.shiftTxt && <p className='mb-2'>{keyBtn.shiftTxt}</p>}
                                                 {keyBtn.text && <p>{keyBtn.text}</p>}
                                             </div>
@@ -188,7 +194,7 @@ const KeyBoard = () => {
                                         return (
                                             <>
                                                 <div className={`primary_btn`} id={`numPadBtn${index + 1}`} key={`key${index}`}>
-                                                    {keyBtn.icon && <img className='mb-1' src={keyBtn.icon} />}
+                                                    {keyBtn.icon && <img className='mb-1' src={keyBtn.icon} alt="lazy" />}
                                                     {keyBtn.shiftTxt && <p className='mb-2'>{keyBtn.shiftTxt}</p>}
                                                     {keyBtn.text && <p>{keyBtn.text}</p>}
                                                 </div>
