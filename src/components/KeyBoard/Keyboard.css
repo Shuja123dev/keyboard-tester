@@ -96,6 +96,8 @@
     justify-content: center;
     flex-direction: column;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
 
 .main_keys {
@@ -262,4 +264,21 @@
 .hold_key {
     background: #31AA4F !important;
 
+}
+
+.flick {
+    background: #00ffff78;
+    border-radius: 50%;
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    top: 55%;
+    left: 55%;
+}
+
+.clicked_btn .flick {
+    height: 1px;
+    width: 1px;
+    transform: scale(1500);
+    transition: 0.8s;
 }
