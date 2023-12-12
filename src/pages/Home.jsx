@@ -22,12 +22,6 @@ const Home = () => {
 
                     <section className="text">
                         <div className="container">
-                            <p>Criamos o testador de teclado mais simples e conveniente, que o ajudará a testar rapidamente o teclado gratuitamente.</p>
-                            <p>Design de interface de teclado virtual fácil de usar para ajudá-lo a fazer testes rapidamente
-                                Nosso serviço é 100% gratuito e não requer cadastro
-                                Para testes mais convenientes, você pode escolher o modo claro ou escuro, bem como o modo de tela inteira
-                                Se você for usuário de Windows ou Mac, o teclado virtual se ajustará automaticamente ao seu sistema operacional.
-                            </p>
                             <h1> Teste de teclado - Aprimore Sua Experiência de Digitação</h1>
                             <p>Criamos o testador de teclado mais simples e conveniente, que o ajudará a testar rapidamente o teclado gratuitamente.
                             </p>
