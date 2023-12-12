@@ -8,19 +8,19 @@ const KeyType = () => {
                 <div className="primary_btn">
                     <p>A</p>
                 </div>
-                <p className="colorType">Normal key state</p>
+                <p className="colorType"> Estado-chave normal</p>
             </div>
             <div className="key_card">
                 <div className="primary_btn hold_key">
                     <p>A</p>
                 </div>
-                <p className="colorType">Pressed for long time</p>
+                <p className="colorType">Pressionado por muito tempo</p>
             </div>
             <div className="key_card">
                 <div className="primary_btn active_key">
                     <p>A</p>
                 </div>
-                <p className="colorType">Key pressed at least once</p>
+                <p className="colorType">Tecla pressionada pelo menos uma vez</p>
             </div>
         </div>
     )

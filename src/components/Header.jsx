@@ -14,9 +14,9 @@ const Header = () => {
                         <div className="header-col">
                             <nav id="nav">
                                 <ul>
-                                    <li><NavLink>Tools</NavLink></li>
-                                    <li><NavLink>Technical Guide</NavLink></li>
-                                    <li><NavLink>About Us</NavLink></li>
+                                    <li><NavLink>Início</NavLink></li>
+                                    {/* <li><NavLink>Technical Guide</NavLink></li>
+                                    <li><NavLink>About Us</NavLink></li> */}
                                 </ul>
                             </nav>
                         </div>
