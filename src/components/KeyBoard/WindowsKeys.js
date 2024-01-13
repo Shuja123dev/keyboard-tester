@@ -6,7 +6,6 @@ import f7 from "./keys/f7.svg"
 import f9 from "./keys/f9.svg"
 import f10 from "./keys/f10.svg"
 import k13 from "./keys/k13.png"
-import control from "./keys/control.svg"
 import windows from "./keys/white_windows.png"
 import context from "./keys/context.png"
 

@@ -13,7 +13,7 @@ function App() {
           <meta name="description"
             content="Teste de Teclado é uma ferramenta de diagnóstico projetada para avaliar e solucionar problemas de funcionalidade e desempenho do teclado."
           />
-          <link rel="canonical" href="/" />
+          <link rel="canonical" href="https://testeteclado.com.br/" />
         </Helmet>
         <Routes>
           <Route path="/" element={<Home />} />
