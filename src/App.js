@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css"
 import Home from "./pages/Home";
 import { Helmet } from "react-helmet";
+import Header from "./components/Header";
 
 function App() {
 
@@ -15,9 +16,15 @@ function App() {
           />
           <link rel="canonical" href="https://testeteclado.com.br/" />
         </Helmet>
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
+
+        <div id="wrapper">
+          <main id="main">
+            <Header />
+            <Routes>
+              <Route path="/" element={<Home />} />
+            </Routes>
+          </main>
+        </div>
       </BrowserRouter>
     </>
   );
