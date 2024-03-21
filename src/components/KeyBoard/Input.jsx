@@ -7,9 +7,6 @@ const Input = ({ value, changer }) => {
         inputRef.current.focus();
     }
 
-    useEffect(() => {
-        inputRef.current.focus();
-    }, []);
     return (
         <input
             className="dispNone"

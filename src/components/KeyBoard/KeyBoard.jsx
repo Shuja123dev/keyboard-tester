@@ -42,7 +42,10 @@ const KeyBoard = () => {
 
     let timePressed = 0, result;
     const handleKeyDown = (event) => {
-        // event.preventDefault();
+
+        if (!(event.code === "KeyC" || event.key === "Control")) {
+            event.preventDefault();
+        }
         result = keyChecker(event, isMac ? macKeys : windowsKeys);
         timePressed = performance.now();
         if (result) {
@@ -89,10 +92,10 @@ const KeyBoard = () => {
 
     return (
         <>
-            <Input
+            {/* <Input
                 value={input}
                 changer={setInput}
-            />
+            /> */}
             <div className="key_board" id='keyBoard'>
                 <div className="main_keys">
                     {
