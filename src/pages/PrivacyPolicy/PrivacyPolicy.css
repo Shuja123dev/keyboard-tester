@@ -1,0 +1,22 @@
+.privacyPolicy_box {
+    padding: 4rem 3.5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2.2rem;
+}
+
+.privacy_imgContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.privacy_img {
+    height: 18rem;
+}
+
+.privacyPolicy_firstPara {
+    font-size: 2.2rem;
+    font-weight: 700;
+}

@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css"
-import Home from "./pages/Home";
+import Home from './pages/index';
 import { Helmet } from "react-helmet";
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
           <link rel="canonical" href="https://testeteclado.com.br/" />
         </Helmet>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/*" element={<Home />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -1,0 +1,26 @@
+.about_box {
+    padding: 4rem 3.5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2.2rem;
+}
+
+.about_heading {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #000;
+}
+
+.about_para {
+    font-size: 2rem;
+}
+
+@media(max-width : 350px) {
+
+    .about_box {
+        padding: 1rem;
+
+    }
+
+}

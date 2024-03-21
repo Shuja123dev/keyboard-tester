@@ -1,14 +1,13 @@
 import React from 'react'
-import Header from '../components/Header'
-import KeyBoard from '../components/KeyBoard/KeyBoard'
-import SwitchButtons from '../components/SwitchButtons/SwitchButtons'
-import KeyType from '../components/KeyBoard/KeyType'
+import Header from '../../components/Header'
+import KeyBoard from '../../components/KeyBoard/KeyBoard'
+import SwitchButtons from '../../components/SwitchButtons/SwitchButtons'
+import KeyType from '../../components/KeyBoard/KeyType'
 
 const Home = () => {
     return (
         <>
             <div id="wrapper">
-                <Header />
                 <main id="main">
                     {/* <Tools /> */}
 
@@ -16,7 +15,6 @@ const Home = () => {
                         <SwitchButtons />
                         <KeyBoard />
                     </section>
-
                     <KeyType />
 
 
