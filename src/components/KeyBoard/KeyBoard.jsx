@@ -42,7 +42,7 @@ const KeyBoard = () => {
 
     let timePressed = 0, result;
     const handleKeyDown = (event) => {
-        event.preventDefault();
+        // event.preventDefault();
         result = keyChecker(event, isMac ? macKeys : windowsKeys);
         timePressed = performance.now();
         if (result) {
