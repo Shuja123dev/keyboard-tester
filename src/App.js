@@ -3,9 +3,10 @@ import "./App.css"
 import Home from "./pages/Home";
 import { Helmet } from "react-helmet";
 import Header from "./components/Header";
-import About from "./pages/about/Abot";
+import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
+import LegalNotice from "./pages/LegalNotice/LegalNotice";
 
 function App() {
 
@@ -25,9 +26,10 @@ function App() {
             <Header />
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/Aviso-Legal-para-Testador-de-Teclado" element={<LegalNotice />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
+              <Route path="/POLÍTICA-DE-PRIVACIDADE" element={<PrivacyPolicy />} />
             </Routes>
           </main>
         </div>

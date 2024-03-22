@@ -1,19 +1,30 @@
 .about_box {
-    padding: 4rem 3.5rem;
+    padding: 10rem 15rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 2.2rem;
 }
 
+.about_box p {
+    font-size: 1.1rem;
+    line-height: 2.8rem;
+    font-family: "Poppins", sans-serif;
+}
+
 .about_heading {
-    font-size: 4.5rem;
+    font-size: 3.4rem;
+    font-family: "Nunito Sans", sans-serif;
     font-weight: 700;
     color: #000;
 }
 
-.about_para {
-    font-size: 2rem;
+@media(max-width : 767px) {
+
+    .about_box {
+        padding: 5rem 7rem;
+    }
+
 }
 
 @media(max-width : 350px) {

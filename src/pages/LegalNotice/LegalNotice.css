@@ -1,0 +1,29 @@
+.notice_box {
+
+    padding: 10rem 15rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2.2rem;
+}
+
+.notice_box p {
+    line-height: 2.9rem;
+}
+
+@media(max-width : 767px) {
+
+    .notice_box {
+        padding: 5rem 7rem;
+    }
+
+}
+
+@media(max-width : 350px) {
+
+    .notice_box {
+        padding: 1rem;
+
+    }
+
+}
