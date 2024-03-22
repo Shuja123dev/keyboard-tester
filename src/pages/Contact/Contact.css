@@ -1,11 +1,12 @@
 .Contact_heading {
     font-size: 4.5rem;
     font-weight: 700;
+    font-family: "Nunito Sans", sans-serif;
     color: #000;
 }
 
 .contact_box {
-    padding: 4rem 3.5rem;
+    padding: 5rem 2rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -20,6 +21,7 @@
     border: none;
     color: #fff;
     background-color: #000;
+    font-family: "Poppins", sans-serif;
     margin-top: 4rem;
 }
 

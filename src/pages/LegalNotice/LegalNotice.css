@@ -1,0 +1,15 @@
+.notice_box {
+
+    padding: 5rem 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2.2rem;
+}
+
+
+
+
+.notice_box p {
+    line-height: 2.9rem;
+}

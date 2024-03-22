@@ -6,6 +6,7 @@
     justify-content: center;
 }
 
+
 .first_col,
 .second_col,
 .third_col {
@@ -53,10 +54,20 @@
     color: #FFF;
 }
 
+.footer_links li a:hover {
+    transition: 0.2s;
+    color: #fb0101;
+}
+
 .second_row {
     background-color: #000;
 }
 
 .anchor_tag {
     color: #fb0101 !important;
+    transition: 0.2s;
+}
+
+.anchor_tag:hover {
+    color: #FFF !important;
 }
