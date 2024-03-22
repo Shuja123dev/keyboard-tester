@@ -1,5 +1,5 @@
 .about_box {
-    padding: 5rem 2rem;
+    padding: 10rem 15rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -19,6 +19,13 @@
     color: #000;
 }
 
+@media(max-width : 767px) {
+
+    .about_box {
+        padding: 5rem 7rem;
+    }
+
+}
 
 @media(max-width : 350px) {
 
