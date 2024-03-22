@@ -27,8 +27,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/Aviso-Legal-para-Testador-de-Teclado" element={<LegalNotice />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route path="/Sobre-nós" element={<About />} />
+              <Route path="/Contate-nos" element={<Contact />} />
               <Route path="/POLÍTICA-DE-PRIVACIDADE" element={<PrivacyPolicy />} />
             </Routes>
           </main>

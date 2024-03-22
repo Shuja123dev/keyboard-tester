@@ -5,8 +5,8 @@ import privacyImg from '../../assets/images/privacy_checkup_icon.svg'
 const PrivacyPolicy = () => {
     return (
         <div className='privacyPolicy_box'>
-            <h1 className="privacy_heading">
-                POLÍTICA DE PRIVACIDADE
+            <h1 className="about_heading">
+                Política de Privacidade
             </h1>
             <p className='privacyPolicy_firstPara'>Este site é afiliado à CMI Marketing, Inc., também conhecida como CafeMedia (“CafeMedia”), para exibir publicidade no site, e a CafeMedia coletará e utilizará dados específicos para fins publicitários. Para saber mais sobre o uso de dados pela CafeMedia, clique aqui: www.cafemedia.com/publisher-advertising-privacy-policy
             </p>
@@ -45,7 +45,7 @@ const PrivacyPolicy = () => {
                 Um cookie é uma sequência de informações que um site armazena no computador de um visitante, e o navegador do visitante fornece ao site cada vez que o visitante retorna. O Teste de Teclado Online usa cookies para ajudar a identificar e rastrear visitantes, seu uso do site do Teste de Teclado Online e suas preferências de acesso ao site. Os visitantes do Teste de Teclado Online que não desejam que cookies sejam colocados em seus computadores devem configurar seus navegadores para recusar cookies antes de usar os sites do Teste de Teclado Online, com a desvantagem de que certos recursos dos sites do Teste de Teclado Online podem não funcionar corretamente sem cookies.
 
             </p>
-        </div>
+        </div >
     )
 }
 

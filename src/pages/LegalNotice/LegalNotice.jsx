@@ -5,7 +5,10 @@ const LegalNotice = () => {
     return (
         <>
             <div className='notice_box'>
-                <p><h2>Aviso Legal para Testador de Teclado</h2>
+                <h1 className="about_heading">
+                    Notícia legal
+                </h1>
+                <p>
                     Se você precisar de mais informações ou tiver alguma dúvida sobre o aviso legal do nosso site, sinta-se à vontade para nos contatar por e-mail em admin@testeteclado.com.br.
                 </p>
                 <p><h3>Avisos Legais para Testador de Teclado</h3>
