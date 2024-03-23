@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import KeyBoard from '../components/KeyBoard/KeyBoard'
 import SwitchButtons from '../components/SwitchButtons/SwitchButtons'
 import KeyType from '../components/KeyBoard/KeyType'
 
 const Home = () => {
+
+    useEffect(() => {
+
+    }, [])
+
     return (
         <>
 

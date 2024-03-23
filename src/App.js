@@ -3,10 +3,11 @@ import "./App.css"
 import Home from "./pages/Home";
 import { Helmet } from "react-helmet";
 import Header from "./components/Header";
-import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import LegalNotice from "./pages/LegalNotice/LegalNotice";
+import Footer from "./components/Footer/Footer";
+import About from "./pages/About/About"
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
               <Route path="/Contate-nos" element={<Contact />} />
               <Route path="/POLÍTICA-DE-PRIVACIDADE" element={<PrivacyPolicy />} />
             </Routes>
+            <Footer />
           </main>
         </div>
       </BrowserRouter>

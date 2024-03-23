@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './LegalNotice.css'
+import { useLocation } from 'react-router-dom';
 
 const LegalNotice = () => {
+
     return (
         <>
             <div className='notice_box'>

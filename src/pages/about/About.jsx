@@ -1,7 +1,10 @@
-import React from 'react'
-import "./About.css"
+import React, { useEffect } from 'react'
+import "./About.css";
+import { useLocation } from 'react-router-dom';
 
 const About = () => {
+
+
     return (
         <>
             <div className="about_box">

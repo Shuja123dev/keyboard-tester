@@ -1,0 +1,129 @@
+.flex-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* footer */
+footer {
+    background-color: #000;
+}
+
+.footer-container {
+    color: white;
+}
+
+.fBox-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 30px 0 100px 0;
+}
+
+.fBox-container h3 {
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+
+.flink-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.flink-box a {
+    width: fit-content;
+    font-size: 13px;
+    margin: 10px 0;
+    color: #a19e9e;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.anchors_footer:hover {
+    color: #f2b9b9;
+}
+
+.footer-container p {
+    font-size: 13px;
+    margin: 20px 0;
+    color: #706f6f;
+}
+
+.fBox-container input {
+    color: #706f6f;
+    height: 30px;
+    width: 100%;
+    font-size: 17px;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #383838;
+    margin-bottom: 40px;
+}
+
+.footer-box {
+    margin: 4rem 0 0 30px;
+    width: 20%;
+    min-width: 230px;
+}
+
+.copy-box span {
+    margin: 0 10px;
+}
+
+.primarybtn {
+    height: 50px;
+    width: 170px;
+    border: none;
+    border-radius: 35px;
+    font-weight: 500;
+    color: #000;
+    cursor: pointer;
+    background-color: white;
+    transition: 0.1s !important;
+}
+
+.icon-box {
+    margin-top: 50px;
+}
+
+.icon-box i {
+    padding-right: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+
+.copy-box {
+    padding-bottom: 20px;
+}
+
+.copy-box p {
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.footer-box button {
+    transition: 0.5s;
+}
+
+/* .footer-box button:hover {
+    background-color: #a01a1a;
+    font-weight: 600;
+} */
+
+#input {
+    transition: 0.5s;
+}
+
+#input:focus {
+    border-bottom: 2px solid #a01a1a;
+}
+
+.icon-box i:hover {
+    color: #f2b9b9;
+}

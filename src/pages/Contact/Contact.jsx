@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Contact.css';
 import Input from '../../components/Input/Input';
+import { useLocation } from 'react-router-dom';
 
 const Contact = () => {
+
     return (
         <>
             <div className="contact_box">

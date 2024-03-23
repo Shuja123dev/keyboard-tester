@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./PrivacyPolicy.css";
 import privacyImg from '../../assets/images/privacy_checkup_icon.svg'
+import { useLocation } from 'react-router-dom';
 
 const PrivacyPolicy = () => {
+
     return (
         <div className='privacyPolicy_box'>
             <h1 className="about_heading">
